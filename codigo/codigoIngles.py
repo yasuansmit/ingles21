@@ -5,9 +5,7 @@ def main():
     results = {} 
 
     while option != 7:
-        print("Authot: Yasuan Smith Caicedo Martinez")
-        print("University Catolic Luis Amigo")
-        print("Welcome to the calculation of the YASUAN")
+   
         print("Select the operation you want to perform:")
         print("1. Addition")
         print("2. Subtraction")

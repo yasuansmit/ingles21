@@ -1,109 +1,108 @@
 import math
 
 def main():
-    opcion = 0
-    resultados = {}  # Diccionario para almacenar resultados de operaciones
+    option = 0
+    results = {}  # Dictionary to store operation results
 
-    while opcion != 7:
-        print("Selecciona la operación que deseas realizar:")
-        print("1. Suma")
-        print("2. Resta")
-        print("3. Multiplicación")
-        print("4. División")
-        print("5. Raíz Cuadrada")
-        print("6. Verificar si un número es primo")
-        print("7. Salir")
-        print("8. Ver resultados anteriores")
+    while option != 7:
+        print("Select the operation you want to perform:")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Square Root")
+        print("6. Check if a number is prime")
+        print("7. Exit")
+        print("8. View previous results")
 
-        opcion = int(input("Ingresa el número de la operación: "))
+        option = int(input("Enter the number of the operation: "))
 
-        if opcion in [1, 2, 3, 4, 5, 6]:
-            resultado = realizar_operacion(opcion)
-            resultados[opcion] = resultado
-        elif opcion == 7:
-            print("Saliendo del programa...")
-        elif opcion == 8:
-            ver_resultados(resultados)
+        if option in [1, 2, 3, 4, 5, 6]:
+            result = perform_operation(option)
+            results[option] = result
+        elif option == 7:
+            print("Exiting the program...")
+        elif option == 8:
+            view_results(results)
         else:
-            print("Opción no válida. Por favor selecciona una opción válida.")
+            print("Invalid option. Please select a valid option.")
 
-def realizar_operacion(opcion):
-    if opcion == 1:
-        return realizar_suma()
-    elif opcion == 2:
-        return realizar_resta()
-    elif opcion == 3:
-        return realizar_multiplicacion()
-    elif opcion == 4:
-        return realizar_division()
-    elif opcion == 5:
-        return calcular_raiz_cuadrada()
-    elif opcion == 6:
-        return verificar_primo()
+def perform_operation(option):
+    if option == 1:
+        return perform_addition()
+    elif option == 2:
+        return perform_subtraction()
+    elif option == 3:
+        return perform_multiplication()
+    elif option == 4:
+        return perform_division()
+    elif option == 5:
+        return calculate_square_root()
+    elif option == 6:
+        return check_if_prime()
 
-def realizar_suma():
-    num1 = int(input("Ingresa el primer número: "))
-    num2 = int(input("Ingresa el segundo número: "))
-    resultado = num1 + num2
-    print("El resultado de la suma es:", resultado)
-    return resultado
+def perform_addition():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    result = num1 + num2
+    print("The result of the addition is:", result)
+    return result
 
-def realizar_resta():
-    num1 = int(input("Ingresa el primer número: "))
-    num2 = int(input("Ingresa el segundo número: "))
-    resultado = num1 - num2
-    print("El resultado de la resta es:", resultado)
-    return resultado
+def perform_subtraction():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    result = num1 - num2
+    print("The result of the subtraction is:", result)
+    return result
 
-def realizar_multiplicacion():
-    num1 = int(input("Ingresa el primer número: "))
-    num2 = int(input("Ingresa el segundo número: "))
-    resultado = num1 * num2
-    print("El resultado de la multiplicación es:", resultado)
-    return resultado
+def perform_multiplication():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    result = num1 * num2
+    print("The result of the multiplication is:", result)
+    return result
 
-def realizar_division():
-    num1 = int(input("Ingresa el primer número: "))
-    num2 = int(input("Ingresa el segundo número: "))
+def perform_division():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
     if num2 != 0:
-        resultado = num1 / num2
-        print("El resultado de la división es:", resultado)
-        return resultado
+        result = num1 / num2
+        print("The result of the division is:", result)
+        return result
     else:
-        print("No es posible dividir por cero.")
+        print("Cannot divide by zero.")
         return None
 
-def calcular_raiz_cuadrada():
-    num = int(input("Ingresa el número para calcular su raíz cuadrada: "))
+def calculate_square_root():
+    num = float(input("Enter the number to calculate its square root: "))
     if num >= 0:
-        resultado = math.sqrt(num)
-        print("La raíz cuadrada de", num, "es:", resultado)
-        return resultado
+        result = math.sqrt(num)
+        print("The square root of", num, "is:", result)
+        return result
     else:
-        print("No es posible calcular la raíz cuadrada de un número negativo.")
+        print("Cannot calculate square root of a negative number.")
         return None
 
-def verificar_primo():
-    num = int(input("Ingresa un número para verificar si es primo: "))
+def check_if_prime():
+    num = int(input("Enter a number to check if it's prime: "))
     if num > 1:
         for i in range(2, int(math.sqrt(num)) + 1):
             if num % i == 0:
-                print(num, "no es primo.")
+                print(num, "is not prime.")
                 return False
         else:
-            print(num, "es primo.")
+            print(num, "is prime.")
             return True
     else:
-        print(num, "no es primo.")
+        print(num, "is not prime.")
         return False
 
-def ver_resultados(resultados):
-    if resultados:
-        print("Resultados anteriores:")
-        for operacion, resultado in resultados.items():
-            print(f"Operación {operacion}: {resultado}")
+def view_results(results):
+    if results:
+        print("Previous results:")
+        for operation, result in results.items():
+            print(f"Operation {operation}: {result}")
     else:
-        print("No hay resultados anteriores.")
+        print("No previous results.")
 
-if  "_main_":
-    main()
+main()

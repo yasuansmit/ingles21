@@ -42,29 +42,29 @@ def perform_operation(option):
         return check_if_prime()
 
 def perform_addition():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
     result = num1 + num2
     print("The result of the addition is:", result)
     return result
 
 def perform_subtraction():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
     result = num1 - num2
     print("The result of the subtraction is:", result)
     return result
 
 def perform_multiplication():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
     result = num1 * num2
     print("The result of the multiplication is:", result)
     return result
 
 def perform_division():
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
     if num2 != 0:
         result = num1 / num2
         print("The result of the division is:", result)
@@ -74,7 +74,7 @@ def perform_division():
         return None
 
 def calculate_square_root():
-    num = float(input("Enter the number to calculate its square root: "))
+    num = int(input("Enter the number to calculate its square root: "))
     if num >= 0:
         result = math.sqrt(num)
         print("The square root of", num, "is:", result)

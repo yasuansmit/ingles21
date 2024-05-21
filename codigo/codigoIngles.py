@@ -19,21 +19,23 @@ def main():
         opcion = int(input("Ingresa el número de la operación: "))
 
         if opcion in [1, 2, 3, 4, 5, 6]:
-            resultado = realizar_operacion(opcion)
+            resultado = (opcion)
             resultados[opcion] = resultado
         elif opcion == 7:
             print("Saliendo del programa...")
         elif opcion == 8:
-            ver_resultados(resultados)
-        else:
-            print("Opción no válida. Por favor selecciona una opción válida.")opcion = int(input("Ingresa el número de la operación: "))
-
-        if opcion in [1, 2, 3, 4, 5, 6]:
-            resultado = realizar_operacion(opcion)
-            resultados[opcion] = resultado
-        elif opcion == 7:
-            print("Saliendo del programa...")
-        elif opcion == 8:
-            ver_resultados(resultados)
+            (resultados)
         else:
             print("Opción no válida. Por favor selecciona una opción válida.")
+            opcion = int(input("Ingresa el número de la operación: "))
+
+        if opcion in [1, 2, 3, 4, 5, 6]:
+            resultado = (opcion)
+            resultados[opcion] = resultado
+        elif opcion == 7:
+            print("Saliendo del programa...")
+        elif opcion == 8:
+            (resultados)
+        else:
+            print("Opción no válida. Por favor selecciona una opción válida.")
+            
